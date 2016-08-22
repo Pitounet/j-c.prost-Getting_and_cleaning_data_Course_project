@@ -1,0 +1,73 @@
+List of variables 
+		data_type : description of type of files
+			chr [1:26] "generic", "test" or "train" 
+		
+		fil_nam : list of all files to be read
+			 [1] "activity_labels.txt"   "features.txt"          "subject_test.txt"      "y_test.txt"           
+			 [5] "X_test.txt"            "body_acc_x_test.txt"   "body_acc_y_test.txt"   "body_acc_z_test.txt"  
+			 [9] "body_gyro_x_test.txt"  "body_gyro_y_test.txt"  "body_gyro_z_test.txt"  "total_acc_x_test.txt" 
+			[13] "total_acc_y_test.txt"  "total_acc_z_test.txt"  "subject_train.txt"     "y_train.txt"          
+			[17] "X_train.txt"           "body_acc_x_train.txt"  "body_acc_y_train.txt"  "body_acc_z_train.txt" 
+			[21] "body_gyro_x_train.txt" "body_gyro_y_train.txt" "body_gyro_z_train.txt" "total_acc_x_train.txt"
+			[25] "total_acc_y_train.txt" "total_acc_z_train.txt"
+			
+		file_dir_level : level, based on data directory from samsung "l0" or "l1" or "l2"
+		
+		file_dir : list of directories where to find files 
+			level 0 : "~/Coursera/Data science/Working directory/getdata_projectfiles_FUCI HAR Dataset/UCI HAR Dataset"
+			level 1 for test : "~/Coursera/Data science/Working directory/getdata_projectfiles_FUCI HAR Dataset/UCI HAR Dataset/test"
+			level 2 for test :"~/Coursera/Data science/Working directory/getdata_projectfiles_FUCI HAR Dataset/UCI HAR Dataset/test/Inertial Signals"
+			level 1 for training : "~/Coursera/Data science/Working directory/getdata_projectfiles_FUCI HAR Dataset/UCI HAR Dataset/train"
+			level 2 for training :"~/Coursera/Data science/Working directory/getdata_projectfiles_FUCI HAR Dataset/UCI HAR Dataset/train/Inertial Signals" 
+				
+		file_type : delimited "d" or fixed width format "fwf" used to choose reading function depending on files
+		nb : number of columns in case of fwf type of files : "NA","128" or "561"
+		work_dir : path from working directory to level 0 files
+
+
+
+
+Liste of tables built from files same names and content as files from samsung :
+
+		activity_labels_df
+		features_df
+		subject_test_df
+		y_test_df
+		X_test_df
+		body_acc_x_test_df
+		body_acc_y_test_df
+		body_acc_z_test_df
+		body_gyro_x_test_df
+		body_gyro_y_test_df
+		body_gyro_z_test_df
+		total_acc_x_test_df
+		total_acc_y_test_df
+		total_acc_z_test_df
+		subject_train_df
+		y_train_df
+		X_train_df
+		body_acc_x_train_df
+		body_acc_y_train_df
+		body_acc_z_train_df
+		body_gyro_x_train_df
+		body_gyro_y_train_df
+		body_gyro_z_train_df
+		total_acc_x_train_df
+		total_acc_y_train_df
+		total_acc_z_train_df
+
+Other tables :
+		file_global_info : includes all necessary info for files to be read. This file is built with variables previously described
+		test and train:  are the table built with generic  Y_test (or train) X_test (or train) and detail test or train info
+		global_table : is the table obtained binding by row  test and train previously decribed
+		global_table_mean_std : is a substract of global table containing only columns that are means or std
+		global_table_merged_nc : is the previous table with actityname added to describe activityinedx( i.e. number) based on table activity_labels
+		
+		mean_by_activity or mean_by_subject  : contains the mean of numeric columns for each activity or each subject
+		mean_by_activity_merged or mean_by_subject_merged : previous table merged with additional column containing "activity" or "subject" to explain what is the pivot used for the mean  
+		
+		
+		Final_file : is the final result of the program
+		
+		
+		
