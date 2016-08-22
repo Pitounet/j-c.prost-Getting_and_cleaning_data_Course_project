@@ -197,7 +197,7 @@ meanbyActivity_merged <-meanbyActivity_merged[,c(length(colnames(meanbyActivity_
 final_file <- rbind(meanbysubject_merged,meanbyActivity_merged)
 
 ## write final table to disc
-write.csv(final_file, file = paste(work_dir,"final_file.csv",sep = "/"))
+write.table(final_file, file = paste(work_dir,"final_file.txt",sep = "/"),row.name=FALSE)
 
 
 
