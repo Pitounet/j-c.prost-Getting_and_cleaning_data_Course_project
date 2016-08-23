@@ -25,8 +25,6 @@ List of variables
 		work_dir : path from working directory to level 0 files
 
 
-
-
 Liste of tables built from files same names and content as files from samsung :
 
 		activity_labels_df
@@ -62,9 +60,98 @@ Other tables :
 		global_table : is the table obtained binding by row  test and train previously decribed
 		global_table_mean_std : is a substract of global table containing only columns that are means or std
 		global_table_merged_nc : is the previous table with actityname added to describe activityinedx( i.e. number) based on table activity_labels
-		
-				
+			
 		Final_file : is the final result of the program with mean of datas group by subjectI1 and activityname
 		
-		
+Column names of final_file are as follow :
+		subjectI1
+		activityname
+		tBodyAcc-mean-XI3
+		tBodyAcc-mean-YI4
+		tBodyAcc-mean-ZI5
+		tGravityAcc-mean-XI43
+		tGravityAcc-mean-YI44
+		tGravityAcc-mean-ZI45
+		tBodyAccJerk-mean-XI83
+		tBodyAccJerk-mean-YI84
+		tBodyAccJerk-mean-ZI85
+		tBodyGyro-mean-XI123
+		tBodyGyro-mean-YI124
+		tBodyGyro-mean-ZI125
+		tBodyGyroJerk-mean-XI163
+		tBodyGyroJerk-mean-YI164
+		tBodyGyroJerk-mean-ZI165
+		tBodyAccMag-meanI203
+		tGravityAccMag-meanI216
+		tBodyAccJerkMag-meanI229
+		tBodyGyroMag-meanI242
+		tBodyGyroJerkMag-meanI255
+		fBodyAcc-mean-XI268
+		fBodyAcc-mean-YI269
+		fBodyAcc-mean-ZI270
+		fBodyAcc-meanFreq-XI296
+		fBodyAcc-meanFreq-YI297
+		fBodyAcc-meanFreq-ZI298
+		fBodyAccJerk-mean-XI347
+		fBodyAccJerk-mean-YI348
+		fBodyAccJerk-mean-ZI349
+		fBodyAccJerk-meanFreq-XI375
+		fBodyAccJerk-meanFreq-YI376
+		fBodyAccJerk-meanFreq-ZI377
+		fBodyGyro-mean-XI426
+		fBodyGyro-mean-YI427
+		fBodyGyro-mean-ZI428
+		fBodyGyro-meanFreq-XI454
+		fBodyGyro-meanFreq-YI455
+		fBodyGyro-meanFreq-ZI456
+		fBodyAccMag-meanI505
+		fBodyAccMag-meanFreqI515
+		fBodyBodyAccJerkMag-meanI518
+		fBodyBodyAccJerkMag-meanFreqI528
+		fBodyBodyGyroMag-meanI531
+		fBodyBodyGyroMag-meanFreqI541
+		fBodyBodyGyroJerkMag-meanI544
+		fBodyBodyGyroJerkMag-meanFreqI554
+		angletBodyAccMeangravityI557
+		angletBodyAccJerkMeangravityMeanI558
+		angletBodyGyroMeangravityMeanI559
+		angletBodyGyroJerkMeangravityMeanI560
+		angleXgravityMeanI561
+		angleYgravityMeanI562
+		angleZgravityMeanI563
+		tBodyAcc-std-XI6
+		tBodyAcc-std-YI7
+		tBodyAcc-std-ZI8
+		tGravityAcc-std-XI46
+		tGravityAcc-std-YI47
+		tGravityAcc-std-ZI48
+		tBodyAccJerk-std-XI86
+		tBodyAccJerk-std-YI87
+		tBodyAccJerk-std-ZI88
+		tBodyGyro-std-XI126
+		tBodyGyro-std-YI127
+		tBodyGyro-std-ZI128
+		tBodyGyroJerk-std-XI166
+		tBodyGyroJerk-std-YI167
+		tBodyGyroJerk-std-ZI168
+		tBodyAccMag-stdI204
+		tGravityAccMag-stdI217
+		tBodyAccJerkMag-stdI230
+		tBodyGyroMag-stdI243
+		tBodyGyroJerkMag-stdI256
+		fBodyAcc-std-XI271
+		fBodyAcc-std-YI272
+		fBodyAcc-std-ZI273
+		fBodyAccJerk-std-XI350
+		fBodyAccJerk-std-YI351
+		fBodyAccJerk-std-ZI352
+		fBodyGyro-std-XI429
+		fBodyGyro-std-YI430
+		fBodyGyro-std-ZI431
+		fBodyAccMag-stdI506
+		fBodyBodyAccJerkMag-stdI519
+		fBodyBodyGyroMag-stdI532
+		fBodyBodyGyroJerkMag-stdI545
+
+
 		
