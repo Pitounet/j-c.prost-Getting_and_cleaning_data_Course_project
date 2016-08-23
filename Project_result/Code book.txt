@@ -63,11 +63,8 @@ Other tables :
 		global_table_mean_std : is a substract of global table containing only columns that are means or std
 		global_table_merged_nc : is the previous table with actityname added to describe activityinedx( i.e. number) based on table activity_labels
 		
-		mean_by_activity or mean_by_subject  : contains the mean of numeric columns for each activity or each subject
-		mean_by_activity_merged or mean_by_subject_merged : previous table merged with additional column containing "activity" or "subject" to explain what is the pivot used for the mean  
-		
-		
-		Final_file : is the final result of the program
+				
+		Final_file : is the final result of the program with mean of datas group by subjectI1 and activityname
 		
 		
 		

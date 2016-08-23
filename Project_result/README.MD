@@ -42,13 +42,7 @@ Naming "subject y_test and y_train unique column
 
 5-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-    -create table with the average of eache variable for each subject by combining tapply in function f and apply and mean as function and  adding columnwith "subject" as value to enditify pivot for mean
-
-    -create table with the average of eache variable for each activity by combining tapply in function g and apply and mean as function and  adding column with activity as value to enditify pivot for mean
-
-
-
-    - merging previous files to obtain global merged file with index to identify if means are calculated by activity or subject
+    -create table with the average of eache variable for each subject and activity name
 
     - write final table to disc in the first level directory define as work_dir
 

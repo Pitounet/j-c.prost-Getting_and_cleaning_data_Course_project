@@ -167,34 +167,14 @@ global_table_merged_nc <-rename(global_table_merged_nc, activityname = V2, Activ
 
 
 ##5-From the data set in step 4, creates a second, independent tidy data set with the average of each variable 
-##for each activity and each subject.
+##for each subject and activity.
 
-#create table with the average of eache variable for each subject by combining tapply in function f and apply
-#and  adding column to enditify pivot for mean
-f <- function(x) { tapply(x,global_table_merged_nc$subjectI1,mean)}
-meanbysubject <- apply(global_table_merged_nc[,4:length(colnames(global_table_merged_nc))],2,FUN = f) %>% tbl_df()
-meanbysubject_merged <- left_join(global_table_merged_nc[,1:3],meanbysubject %>% cbind(subjectI1 = c(1:30))%>% tbl_df()
-                                  , by= "subjectI1",suffix = c("","bysubjectI1"))%>%
-                                 mutate(meanby = "subject")
-meanbysubject_merged <-meanbysubject_merged[,c(length(colnames(meanbysubject_merged)),
-                                                 1:length(colnames(meanbysubject_merged))-1)]
+global_data_table <- as.data.table(global_table_merged_nc)
+global_data_table <-global_data_table [,-'Activityindex', with = FALSE]
+setkey(global_data_table,subjectI1,activityname)
+final_file <- global_data_table[,lapply(
+                        .SD,mean), by = key(global_data_table)]
 
-
-#create table with the average of eache variable for each activity by combining tapply in function g and apply
-#and  adding column to enditify pivot for mean
-g <- function(x) { tapply(x,global_table_merged_nc$Activityindex,mean)}
-meanbyActivity <- apply(global_table_merged_nc[,4:89],2,FUN = g) %>% tbl_df()
-meanbyActivity_merged <- left_join(global_table_merged_nc[,1:3],meanbyActivity %>% cbind(Activityindex = c(1:30))%>% tbl_df()
-                                  , by= "Activityindex",suffix = c("","Activityindex"))%>%
-                        mutate(meanby = "Activity")
-meanbyActivity_merged <-meanbyActivity_merged[,c(length(colnames(meanbyActivity_merged)),
-                                                 1:length(colnames(meanbyActivity_merged))-1)]
-        
-
-
-## merging  files to obtain global merged file with index to identify if means are calculated by activity or subject
-
-final_file <- rbind(meanbysubject_merged,meanbyActivity_merged)
 
 ## write final table to disc
 write.table(final_file, file = paste(work_dir,"final_file.txt",sep = "/"),row.name=FALSE)
